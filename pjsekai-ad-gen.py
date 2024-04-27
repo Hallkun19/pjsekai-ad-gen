@@ -5,7 +5,7 @@ import subprocess
 #テキスト
 print("== プロセカ風宣伝画像ジェネレーター --------------------")
 print("   制作:はるくん (@halkun19)")
-print("   バージョン: 0.1")
+print("   v0.0.1")
 print("")
 print("   pjsekai-background-gen:名無し。(@sevenc_nanashi)")
 print("")
