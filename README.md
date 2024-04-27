@@ -1,2 +1,4 @@
 # pjsekai-ad-gen
-プロセカ風宣伝画像ジェネレーター
+このアプリの一部に「名無し。(@sevenc-nanashi)」さんの「pjsekai-background-gen-rust」を使用しています。
+https://github.com/sevenc-nanashi/pjsekai-background-gen-rust
+何か問題がありましたら非公開にいたしますのでご連絡ください。
