@@ -18,7 +18,7 @@ SNS等に投稿する際のクレジットは要りません。ですが一言�
 
 
 # クレジット
-このアプリの一部には「名無し。(@sevenc-nanashi)」さんの「pjsekai-background-gen-rust」を使用しています。
+このアプリには「名無し。(@sevenc-nanashi)」さんの「pjsekai-background-gen-rust」を使用しています。
 
 https://github.com/sevenc-nanashi/pjsekai-background-gen-rust
 
