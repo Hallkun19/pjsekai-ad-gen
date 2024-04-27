@@ -1,5 +1,6 @@
 # pjsekai-ad-gen
-プロセカ風宣伝画像ジェネレーター
+下のような画像を生成するツール
+![psresult](https://github.com/Hallkun19/pjsekai-ad-gen/assets/164134427/886cb5ef-41d9-41ed-a702-a1e90cc4adf8)
 
 
 
