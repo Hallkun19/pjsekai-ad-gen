@@ -1,5 +1,5 @@
 # pjsekai-ad-gen
-↓↓こんな感じの画像を作るツール
+↓↓こんな感じの画像を自動で作るツール
 
 <img src="https://github.com/Hallkun19/pjsekai-ad-gen/assets/164134427/8af84205-f41e-48cf-8f54-84456f4273b1" width="70%" />
 
