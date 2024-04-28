@@ -24,6 +24,7 @@ SNS等に投稿する際のクレジットは要りません。
 このプログラムには「名無し。(@sevenc-nanashi)」さんの「pjsekai-background-gen-rust」を使用しています。  
 https://github.com/sevenc-nanashi/pjsekai-background-gen-rust  
 
+
   
 その他問題がありましたら対処いたしますのでご連絡ください。
 
