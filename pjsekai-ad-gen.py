@@ -4,28 +4,41 @@ import os
 import urllib.request
 
 
+#テキスト下準備
+CYAN = "\033[36m"
+BLUE = "\033[34m"
+MAGENTA = "\033[31m"
+WHITE = "\033[37m"
+RESET = "\033[0m"
+
+
 #テキスト
-print("== プロセカ風宣伝画像ジェネレーター --------------------")
-print("   制作:はるくん (@halkun19)")
-print("   バージョン: 0.1")
+print(CYAN + "== プロセカ風宣伝画像ジェネレーター --------------------------------")
 print("")
-print("   pjsekai-background-gen:名無し。(@sevenc_nanashi)")
+print(WHITE + "    制作:" + CYAN + "はるくん (@halkun19)")
+print("    バージョン:" + CYAN + "0.1.0" + RESET)
 print("")
-print("   初めて作ったアプリケーションなので、")
-print("   バグがあっても見逃してやってくださいm(_ _)m")
-print("   あまりに致命的だったら頑張って直しますので")
-print("   僕のDMなどで教えていただけるとありがたいです")
-print("--------------------------------------------------------")
+print("    pjsekai-background-gen:" + CYAN + "名無し。(@sevenc_nanashi)" + RESET)
+print("")
+print("    初めて作ったツールのため、平気でバグがあると思うので")
+print("    見つけた場合はスレッドなどで教えていただけるとありがたいです")
+print("")
+print(CYAN + "--------------------------------------------------------------------" + RESET)
+print("")
 
 
 #下準備
-if os.path.isdir("resource/") == False:
+if os.path.isfile("resource/template.png") == False:
     print("初回処理中...")
     os.makedirs("resource/font/")
     urllib.request.urlretrieve("https://raw.githubusercontent.com/Hallkun19/pjsekai-ad-gen/main/resource/template.png", "resource/template.png")
     urllib.request.urlretrieve("https://github.com/Hallkun19/pjsekai-ad-gen/raw/main/resource/font/bold.ttf", "resource/font/bold.ttf")
     urllib.request.urlretrieve("https://github.com/Hallkun19/pjsekai-ad-gen/raw/main/resource/font/thin.ttf", "resource/font/thin.ttf")
     urllib.request.urlretrieve("https://github.com/sevenc-nanashi/pjsekai-background-gen-rust/releases/download/v0.1.0/pjsekai-background-gen.exe", "pjsekai-background-gen-by-nanashi.exe")
+    print("完了")
+    print("")
+    print(CYAN + "--------------------------------------------------------------------" + RESET)
+    print("")
 
 cover_img = Image.open("resource/template.png")
 
@@ -33,12 +46,23 @@ title_font = ImageFont.truetype('resource/font/bold.ttf', 100)
 composer_font = ImageFont.truetype('resource/font/thin.ttf', 48)
 singer_font = ImageFont.truetype('resource/font/thin.ttf', 38)
 
-jacket_path = input("ジャケットのパスを「\"」無しで入力してください：")
-title = input("楽曲のタイトルを入力してください：")
-lyricer = input("作詞者を入力してください：")
-composer = input("作曲者を入力してください：")
-mixer = input("編曲者を入力してください：")
-singer = input("歌手を入力してください：")
+temp_jacket = input(CYAN + "ジャケットのパス" + RESET + "を入力してください：")
+title = input(CYAN + "楽曲のタイトル" + RESET + "を入力してください：")
+lyricer = input(CYAN + "作詞者" + RESET + "を入力してください：")
+composer = input(CYAN + "作曲者" + RESET + "を入力してください：")
+mixer = input(CYAN + "編曲者" + RESET + "を入力してください：")
+singer = input(CYAN + "歌手"+ RESET + "を入力してください：")
+
+print("")
+print(CYAN + "--------------------------------------------------------------------" + RESET)
+print("")
+print("画像生成中...")
+
+temp_jacket = temp_jacket.replace("\"", "")
+jacket_path = temp_jacket.replace("'", "")
+
+
+
 
 
 #subprocess有効化（以下コピペ）
@@ -122,4 +146,4 @@ bg = Image.alpha_composite(bg, dummy)
 bg.save("result.png")
 
 
-print("画像が生成されました")
+print("生成完了")
